@@ -33,10 +33,14 @@ const somar = (...numeros) => {
 
 console.log(somar(1,2,3,4,5,6,7,8,9,10))
 
-const potencia = base => {
-  return function(exp) {
+// uma função arrow dentro de outra função
+
+/*const potencia = base => {
+  return exp => {
     return Math.pow(base,exp)
   }
 }
-
-console.log(potencia(2)(8))
+*/ 
+//refatorção
+const potencia = base => exp =>  Math.pow(base,exp)
+console.log(potencia(2)(10))
